@@ -45,7 +45,7 @@ We trained a CatBoostClassifier with 5-fold cross-validation, achieving the foll
 - **AUC Score**: 0.7705
 - **Accuracy**: 91.98%
 
-These results demonstrate the model's strong discriminative power, aiding in responsible lending decisions.
+These results demonstrate the model's strong discriminative power, aiding in responsible lending decisions. When accepting future applications, the use of this model can be extremely helpful in process automation to help reduce the time needed for human review of applications. Automating this process will increase the number of loans that the company will be able to hold as the reduction in time from human work to the model's work is drastic. This will save the firm money on labor and increase their potential for profit growth with the new ability to accept more applicants. Given the accuracy, this model should be used in tandem with human workers so that the remaining roughly 8% of applications can be handled by humans to verify the results. 
 
 ## 8. Results
 The model's performance highlights its utility in differentiating between likely defaulters and reliable borrowers. This work supports Home Credit's mission by ensuring accurate and fair assessments of creditworthiness, contributing to inclusive financial services.
@@ -57,12 +57,10 @@ This project taught us the importance of:
 2. **Feature Selection and Engineering**: Selecting relevant features and creating new ones can greatly improve model performance.
 3. **Understanding Business Context**: Thoroughly understanding the business problem ensures that the data analysis and model development align with real-world needs.
 
-## 10. Project Contributors
-Our team's contributions include:
+During my groups time with this project we encountered a few problems with the data. Being this is the first time many of us had seen a dataset this large it was daunting to know where to begin and how to go about cleaning and preparing our data for the model. Specifically seing that lots of the data was empty poised a huge challenge on us as to reevaluate what rows were important and unimportant and how to gage that. Then further more deciding on a proper strategy for how to impute the data. For most of these we took a mean approach, it seemed to be the safest option. Meaning that if columns or rows were missing above the mean amount of data on average, they would be removed. With imputing, I employed a strategy of imputing based on mean value of the column. While this biased the data towards the middle, the amount of mising data in the dataset was drastically reduced before imputing therefore reducing the impact of the imputation. Additionally, understanding how to combine the transactional data with our train/test datasets was a common problem amongst our group as the transactional data needed to be of the same grain as our train/test data.
 
-- Data cleaning, exploration, and visualization
-- Feature engineering and model development
-- Evaluation and interpretation of results
+## 10. Project Contribution
+I was responsible for creating and running my own exploratory data analysis and modeling notebooks. In these notebooks I was able to draw deeper understanding of the data by cleaning the data and investigating features that are used in general loan application decisions or those that had high correlations with acceptance/denial. Additionally I assisted in developing the catboost model that we deployed to help predict whether a candidate will default on their loans or not. Some of my contributions in the model development were: feature engineering, feature importance testing, and model selection.
 
 ## 11. Conclusion
 This project has shown that predictive modeling can significantly enhance the ability of financial institutions to lend responsibly, while also promoting financial inclusion by accurately assessing creditworthiness. This work underscores the impactful role of data science in advancing equitable financial services.
